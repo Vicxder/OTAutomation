@@ -1750,3 +1750,18 @@ padding-top: 18px;
 }
 
 
+
+/* Ajustes por defecto para pantallas grandes */
+#hero_section {
+  background-position: center center;
+  background-size: cover;
+}
+
+/* En pantallas menores a 768px (celulares) */
+@media (max-width: 768px) {
+  #hero_section {
+    background-position: center top; /* o: center 30% */
+  }
+}
+
+
