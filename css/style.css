@@ -1760,7 +1760,7 @@ padding-top: 18px;
 /* En pantallas menores a 768px (celulares) */
 @media (max-width: 768px) {
   #hero_section {
-    background-position: center top; /* o: center 30% */
+    background-position: center 30%; /* o: center 30% */
   }
 }
 
