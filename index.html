@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>OTA Automation</title>
+<title>OT Automation</title>
 <link rel="icon" href="favicon.png" type="image/png">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css"> 
@@ -39,25 +39,24 @@
 <!--Header_section--> 
 
 <!--Hero_Section-->
-<section id="hero_section" class="top_cont_outer">
-  <div class="hero_wrapper">
+<section id="hero_section" class="fullscreen landing parallax" style="background-image:url('img/bg.jpg');" data-img-width="2000" data-img-height="1325" data-diff="100">
+  <div class="overlay">
     <div class="container">
       <div class="hero_section">
         <div class="row">
-          <div class="col-lg-5 col-sm-7">
-            <div class="top_left_cont zoomIn wow animated"> 
-              <h2>Líderes en <strong>Automatización e Ingeniería</strong></h2>
-              <p>Ofrecemos soluciones personalizadas para sistemas de control y automatización industrial, impulsando la innovación y eficiencia de tu empresa.</p>
-              <a href="#service" class="read_more2">Conoce más</a> </div>
-          </div>
-          <div>
-            <img src="img/mainImg.png" class="bannerImg zoomIn wow animated" alt="" />
+          <div class="col-lg-8 col-sm-12 text-center">
+            <div class="top_left_cont zoomIn wow animated">
+              <h2 class="wow fadeInLeft">Líderes en <strong>Automatización e Ingeniería</strong></h2>
+              <p class="wow fadeInUp">Ofrecemos soluciones personalizadas para sistemas de control y automatización industrial, impulsando la innovación y eficiencia de tu empresa.</p>
+              <a href="#service" class="read_more2 wow fadeInLeft">Conoce más</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <!--Hero_Section--> 
 
 <section id="aboutUs">
@@ -151,11 +150,16 @@
 </section>
 
 <!--Clients-->
-<section class="page_section" id="clients">
-  <h2>Clientes</h2>
-  <div class="client_logos">
-    <div class="container">
-      <ul class="fadeInRight animated wow">
+<h2>Clientes</h2>
+<div class="client_logos">
+  <div class="container">
+    <div class="logos_slider">
+      <ul class="logo-track">
+        <li><img src="img/client_logo1.png" alt=""></li>
+        <li><img src="img/client_logo2.png" alt=""></li>
+        <li><img src="img/client_logo3.png" alt=""></li>
+        <li><img src="img/client_logo5.png" alt=""></li>
+        <!-- Duplicados para loop infinito -->
         <li><img src="img/client_logo1.png" alt=""></li>
         <li><img src="img/client_logo2.png" alt=""></li>
         <li><img src="img/client_logo3.png" alt=""></li>
@@ -163,61 +167,33 @@
       </ul>
     </div>
   </div>
-</section>
+</div>
 
 <!--Team-->
 <section class="page_section team" id="team">
   <div class="container">
     <h2>Equipo</h2>
     <h6>Profesionales con alta experiencia en automatización industrial.</h6>
-    <div class="member-area">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="member wow bounceInUp animated">
-            <div class="member-container">
-              <div class="inner-container">
-                <div class="author-avatar"> <img class="img-circle" src="img/team_pic1.jpg" alt=""> </div>
-                <div class="member-details">
-                  <h4 class="name">Victor Collio</h4>
-                  <span class="designation">Ingeniero de Control</span>
-                  <p>Especialista en sistemas DCS, con sólida experiencia en minería y automatización avanzada.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member wow bounceInUp animated">
-            <div class="member-container">
-              <div class="inner-container">
-                <div class="author-avatar"> <img class="img-circle" src="img/team_pic2.jpg" alt=""> </div>
-                <div class="member-details">
-                  <h4 class="name">Matías García</h4>
-                  <span class="designation">Desarrollador Industrial</span>
-                  <p>Encargado de programación y diseño de soluciones automatizadas a medida.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="member wow bounceInUp animated">
-            <div class="member-container">
-              <div class="inner-container">
-                <div class="author-avatar"> <img class="img-circle" src="img/team_pic3.jpg" alt=""> </div>
-                <div class="member-details">
-                  <h4 class="name">Yamil Alanis</h4>
-                  <span class="designation">Especialista en Proyectos</span>
-                  <p>Amplia trayectoria liderando proyectos de automatización e implementación en terreno.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="team-text-list">
+      <div class="team-member">
+        <h4>Victor Collio</h4>
+        <p><strong>Ingeniero de Control</strong><br>
+        Especialista en sistemas DCS, con sólida experiencia en minería y automatización avanzada.</p>
+      </div>
+      <div class="team-member">
+        <h4>Matías García</h4>
+        <p><strong>Desarrollador Industrial</strong><br>
+        Encargado de programación y diseño de soluciones automatizadas a medida.</p>
+      </div>
+      <div class="team-member">
+        <h4>Yamil Alanis</h4>
+        <p><strong>Especialista en Proyectos</strong><br>
+        Amplia trayectoria liderando proyectos de automatización e implementación en terreno.</p>
       </div>
     </div>
   </div>
 </section>
+
 
 <!--Contacto-->
 <footer class="footer_wrapper" id="contact">
@@ -238,7 +214,7 @@
       </div>
     </section>
     <div class="footer_bottom">
-      <span>© 2025 OTA Automation. Todos los derechos reservados.</span>
+      <span>© 2025 OT Automation. Todos los derechos reservados.</span>
     </div>
   </div>
 </footer>
