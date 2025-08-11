@@ -44,34 +44,10 @@
 <!--Header_section--> 
 
 <!--Hero_Section-->
-<!-- <section id="hero_section" class="fullscreen landing parallax"
-  style="background-image:url('img/bg.jpg');" data-img-width="2000" data-img-height="1325" data-diff="100"> -->
 
 <section id="hero_section" class="fullscreen landing parallax"
   style="background-image:url('img/bg.jpg');" data-img-width="2000" data-img-height="1325" data-diff="100">
-
-  <!-- Video de fondo -->
-  <video id="heroVideo" class="hero_bg" autoplay muted loop playsinline preload="auto" poster="img/bg.jpg" aria-hidden="true">
-    <source src="video/ota_services_showcase.webm" type="video/webm">
-    <!-- opcional: fallback MP4 
-    <source src="video/ota_services_showcase.mp4" type="video/mp4"> -->
-  </video>
-
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const v = document.getElementById('heroVideo');
-  const tryPlay = () => v && v.play && v.play().catch(()=>{});
-  tryPlay(); // al cargar
-  ['click','touchstart'].forEach(ev =>
-    window.addEventListener(ev, tryPlay, { once:true })
-  );
-  document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) tryPlay();
-  });
-});
-</script>
-
-  <div class="hero_overlay">
+  <div class="overlay">
     <div class="container">
       <div class="hero_section">
         <div class="row">
