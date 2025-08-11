@@ -215,14 +215,14 @@ p {
     position: relative;
 }
 
-.hero_section {
+#hero_section {
     position: relative;
     min-height: 100vh;
     background: url('img/bg.jpg') center/cover no-repeat; /* fallback inmediato */
     overflow: hidden;
 }
 
-#hero_section .hero-bg{
+.hero-bg{
   position: absolute;
   inset: 0;            /* top/right/bottom/left: 0 */
   width: 100%;
@@ -232,7 +232,7 @@ p {
   pointer-events: none;/* no captura clics/scroll */
 }
 
-#hero_section .overlay{
+.hero-overlay{
   position: relative;
   z-index: 1;          /* sobre el video */
   /* opcional: oscurecer para mejor contraste de texto */
@@ -241,7 +241,7 @@ p {
 
 /* Respeta usuarios que reducen animaciones */
 @media (prefers-reduced-motion: reduce){
-  #hero_section .hero-bg{ display: none; }
+  .hero-bg{ display: none; }
 }
 
 .white_pad {
