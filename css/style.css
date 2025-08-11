@@ -233,10 +233,14 @@ p {
 }
 
 .hero-overlay{
-  position: relative;
   z-index: 1;          /* sobre el video */
-  /* opcional: oscurecer para mejor contraste de texto */
-  /* background: rgba(0,0,0,.35); */
+  background: rgba(0, 0, 0, 0.4); /* efecto oscuro sobre la imagen */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: white;
 }
 
 /* Respeta usuarios que reducen animaciones */
