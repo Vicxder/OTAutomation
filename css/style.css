@@ -216,7 +216,32 @@ p {
 }
 
 .hero_section {
-    position: relative; 
+    position: relative;
+    min-height: 100vh;
+    background: url('img/bg.jpg') center/cover no-repeat; /* fallback inmediato */
+    overflow: hidden;
+}
+
+#hero_section .hero-bg{
+  position: absolute;
+  inset: 0;            /* top/right/bottom/left: 0 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* llena sin deformar */
+  z-index: 0;
+  pointer-events: none;/* no captura clics/scroll */
+}
+
+#hero_section .overlay{
+  position: relative;
+  z-index: 1;          /* sobre el video */
+  /* opcional: oscurecer para mejor contraste de texto */
+  /* background: rgba(0,0,0,.35); */
+}
+
+/* Respeta usuarios que reducen animaciones */
+@media (prefers-reduced-motion: reduce){
+  #hero_section .hero-bg{ display: none; }
 }
 
 .white_pad {
@@ -262,15 +287,14 @@ p {
     margin: 0 0 30px 0;
     line-height: 26px;
 }
-.hero_section{
-    position: relative;
-}
+
 .bannerImg{
     position: absolute;
 bottom: 0px;
     right: 0px;
 float: right;
 }
+
 a.read_more2 {
     font-family: 'Raleway', sans-serif;
     display: block;
