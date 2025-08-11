@@ -222,7 +222,7 @@ p {
     overflow: hidden;
 }
 
-.hero-bg{
+.hero_bg {
   position: absolute;
   inset: 0;            /* top/right/bottom/left: 0 */
   width: 100%;
@@ -232,7 +232,7 @@ p {
   pointer-events: none;/* no captura clics/scroll */
 }
 
-.hero-overlay{
+.hero_overlay {
   z-index: 1;          /* sobre el video */
   background: rgba(0, 0, 0, 0.4); /* efecto oscuro sobre la imagen */
   width: 100%;
@@ -244,8 +244,8 @@ p {
 }
 
 /* Respeta usuarios que reducen animaciones */
-@media (prefers-reduced-motion: reduce){
-  .hero-bg{ display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg { display: none; }
 }
 
 .white_pad {
@@ -292,7 +292,7 @@ p {
     line-height: 26px;
 }
 
-.bannerImg{
+.bannerImg {
     position: absolute;
 bottom: 0px;
     right: 0px;
