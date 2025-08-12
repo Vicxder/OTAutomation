@@ -1090,7 +1090,7 @@ transition: all .25s ease;
 #portfolio_wrapper .one-four {
     margin: 0!important;
     line-height: 0;
-    width: 25%;
+    width: 50%;
     padding: 0;
     position: relative;
 }
@@ -1143,7 +1143,7 @@ transition: all .25s ease;
 }
 
 .item_overlay:hover {
-    background: rgba(0, 93, 150, 0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .item_info {
