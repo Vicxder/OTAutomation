@@ -133,7 +133,7 @@
           <div class="service_block">
             <div class="service_icon icon3 delay-03s animated wow zoomIn"> <span><i class="fa fa-cogs"></i></span> </div>
             <h3 class="animated fadeInUp wow">Proyectos de Automatización</h3>
-            <p class="animated fadeInDown wow">Convertimos ideas en proyectos automatizados. Diseñamos, programamos e implementamos sistemas robustos, flexibles y seguros para cualquier industria.</p>
+            <p class="animated fadeInDown wow">Del plan a la operación: Transformamos ideas en proyectos automatizados. Diseñamos, programamos e implementamos sistemas robustos, flexibles, seguros y escalables para cualquier industria.</p>
           </div>
         </div>
       </div>
@@ -163,19 +163,47 @@
       </ul>
     </div>
     <div class="isotope fadeInLeft animated wow" id="portfolio_wrapper">
-      <!-- Aquí van tus proyectos -->
-      <div class="portfolio-item one-four ecosystems isotope-item">
+          <div id="project_container">
+            <ul id="project-page-button-fullscreen">
+            <li><a href="#" id="project_close" aria-label="Cerrar proyecto"></a></li>
+            </ul>
+
+            <div id="project_data" class="project-page">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-7">
+                    <img id="proj_img" src="" alt="" style="width:100%;height:auto;display:block;">
+                  </div>
+                  <div class="col-md-5 project-description">
+                    <h5 id="proj_title"></h5>
+                    <div class="small-border"></div>
+                    <p id="proj_desc"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <!-- ITEM 1 -->
+      <div class="portfolio-item one-four ecosystems isotope-item"
+       data-title="Ecosistemas robustos"
+       data-desc="Trabajamos con ABB, Rockwell, Siemens y Schneider: fiabilidad 24/7, escalabilidad, ingeniería unificada y soporte global."
+       data-full="img/marcas@2x.jpg">
         <div class="portfolio_img"> <img src="img/marcas.png" alt="Ecosistemas Robustos"> </div>
         <div class="item_overlay">
+          <a href="#" class="open-project-link" aria-label="Ampliar Ecosistemas robustos"></a>
           <div class="item_info">
             <h4 class="project_name">Ecosistemas Robustos</h4>
-              <p>Trabajamos con las marcas líderes del sector — <strong>ABB, Rockwell, Siemens y Schneider</strong> — cuya fiabilidad 
+            <span class="project_catg">Marcas líderes</span>
+            <span class="zoom-icon"></span>
+              <!-- <p>Trabajamos con las marcas líderes del sector — <strong>ABB, Rockwell, Siemens y Schneider</strong> — cuya fiabilidad 
                 en procesos continuos críticos, ecosistemas robustos, escalabilidad y modularidad, ingeniería unificada y arquitecturas 
                 flexibles respalda nuestras soluciones con la maxima calidad. Además, ofrecen mantenimiento sencillo y cobertura global.
-              </p>
+              </p> -->
           </div>
         </div>
       </div>
+
+      <!-- ITEM 2 -->
       <div class="portfolio-item one-four certs isotope-item">
         <div class="portfolio_img"> <img src="img/cert.png" alt="Certificados"> </div>
         <div class="item_overlay">

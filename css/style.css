@@ -1062,7 +1062,7 @@ transition: all .25s ease;
     letter-spacing: -1px;
     margin: 0 0 15px;
     text-align: center;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .section-title span {
@@ -1152,7 +1152,7 @@ transition: all .25s ease;
     width: 100%;
     top: 50%;
     margin-top: -50px;
-    text-align: left;
+    text-align: center;
 }
 
 .project_name {
