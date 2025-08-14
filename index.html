@@ -404,10 +404,10 @@
         <h2>Contáctanos</h2>
         <div class="row">
           <div class="col-lg-12 wow fadeInLeft delay-06s">
-            <form id="contactForm" class="form" novalidate>
+            <form id="contactForm" class="form">
               <input class="input-text" type="text" name="name" placeholder="Tu nombre *" required>
-              <input class="input-text" type="email" name="email" placeholder="Tu correo electrónico *" required>
-              <input class="input-text" type="text" name="company" placeholder="Tu compañia o empresa *" required>
+              <input class="input-text" type="email" name="email" inputmode="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Tu correo electrónico *" required>
+              <input class="input-text" type="text" name="company" placeholder="Tu empresa *" required>
 
               <!-- honeypot (anti-bots) -->
               <input type="text" name="country" style="display:none">
@@ -429,7 +429,7 @@
       const msg  = document.getElementById('formMsg');
       const btn  = document.getElementById('sendBtn');
 
-      const FLOW_URL = 'https://prod-13.brazilsouth.logic.azure.com:443/workflows/349dbb5b199e45e9a58440b2abc4be60/triggers/manual/paths/invoke?api-version=2016-06-01'; // Pega aquí tu URL
+      const FLOW_URL = 'https://prod-13.brazilsouth.logic.azure.com:443/workflows/349dbb5b199e45e9a58440b2abc4be60/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QH-Q445szrj_EDvWcaPgqbsn1N8RVWZEZ-GYkS-f7ME'; // Pega aquí tu URL
       const API_KEY  = 'Dorel.,2025#.OTA'; // Debe coincidir con el del flujo
 
       form.addEventListener('submit', async (e) => {
@@ -488,5 +488,3 @@
 
 </body>
 </html>
-
-
