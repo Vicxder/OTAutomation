@@ -22,7 +22,7 @@
       </a></div>
       <nav class="navbar navbar-inverse" role="navigation">
         <div class="navbar-header">
-          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> </button>
         </div>
         <div id="main-nav" class="collapse navbar-collapse navStyle">
           <ul class="nav navbar-nav" id="mainNav">
@@ -32,7 +32,22 @@
             <!-- <li><a href="#clients" class="scroll-link">Clientes</a></li>
             <li><a href="#team" class="scroll-link">Equipo</a></li> -->
             <li><a href="#contact" class="scroll-link">Contacto</a></li>
-            <li><a href="https://otautomationservices.sharepoint.com/" class="scroll-link">Intranet</a></li>
+            <li><a href="https://otautomationservices.sharepoint.com/" class="intranet-link" target="_blank">Intranet</a></li>
+            <script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const intranet = document.querySelector('#mainNav .intranet-link');
+                if (!intranet) return;
+
+                intranet.addEventListener('click', () => {
+                  // Ejecuta después de otros handlers que puedan marcar .active
+                  setTimeout(() => {
+                    intranet.blur();                        // quita foco del enlace
+                    const li = intranet.closest('li');
+                    li && li.classList.remove('active');    // evita que quede “activo”
+                  }, 0);
+                });
+              });
+            </script>
           </ul>
         </div>
       </nav>
@@ -40,6 +55,8 @@
   </div>
 </header>
 <!--Header_section--> 
+
+
 
 <!--Hero_Section-->
 <section id="hero_section" class="fullscreen landing parallax"
@@ -53,14 +70,14 @@
               <h2><strong>OT Automation Services</strong></h2>
               <p><strong>Especialistas en servicios de automatización de Tecnología Operativa (OT) para la industria. 
                 Aportamos a nuestros clientes con soluciones en:<br>
-                <br>• Modelado de procesos (visión de alto nivel).
-                <br>• Diseño de lógica de control.
-                <br>• Diseño de infraestructura OT/IT.
-                <br>• Ingeniería de detalle e instalación.
-                <br>• Diseño de interfaces HMI/SCADA.
-                <br>• Optimización de operaciones (mejora continua).
-                <br>• Gestión de proyectos: alcance, riesgos y cronograma.<br><br><br><br><br></strong>
-              </p>
+                <br>&emsp;&emsp;• Modelado de procesos (visión de alto nivel).
+                <br>&emsp;&emsp;• Diseño de lógica de control.
+                <br>&emsp;&emsp;• Diseño de infraestructura OT/IT.
+                <br>&emsp;&emsp;• Ingeniería de detalle e instalación.
+                <br>&emsp;&emsp;• Diseño de interfaces HMI/SCADA.
+                <br>&emsp;&emsp;• Optimización de operaciones (mejora continua).
+                <br>&emsp;&emsp;• Gestión de proyectos: alcance, riesgos y cronograma.</strong>
+              </p><br><br><br><br><br>
             </div>
           </div>
         </div>
@@ -84,12 +101,12 @@
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
             <div class="delay-02s fadeInDown wow animated">
               <h3>Operational Technology Automation Services</h3>
-              <p><br>• Somos una empresa dedicada a ofrecer soluciones integrales en ingeniería y automatización industrial, 
+              <p><br>&emsp;• Somos una empresa dedicada a ofrecer soluciones integrales en ingeniería y automatización industrial, 
                 especialmente para el sector minero. Nuestro equipo está conformado por profesionales altamente calificados, 
                 contando con experiencia en el desarrollo, implementación y mantenimiento de proyectos de control automatizado. 
                 Brindamos soluciones personalizadas que satisfacen necesidades específicas de nuestros clientes, 
                 trabajando bajo estrictos estándares de calidad, seguridad y medio ambiente.<br>
-                <br>• Promovemos la innovación tecnológica mediante el uso de equipos de última generación y fomentamos una cultura preventiva 
+                <br>&emsp;• Promovemos la innovación tecnológica mediante el uso de equipos de última generación y fomentamos una cultura preventiva 
                 en toda la organización. Nuestra meta es construir relaciones duraderas basadas en confianza, transparencia y excelencia técnica. 
                 Lo que nos aporta un sello de calidad que nos distingue.</p>
             </div>
@@ -145,7 +162,6 @@
         <div class="row">
           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
             <div class="portfolio-item">
-              <p><br></p>
               <img src="img/marcas.png" class="portfolio_img" alt="Ecosistemas">
               <div class="item_overlay">
                 <div class="item_info"><h4 class="project_name">Fabricantes de nivel mundial</h4></div>
@@ -154,11 +170,11 @@
           </div>
           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
             <div class="delay-02s fadeInLeft wow animated">
-              <br><h3>Ecosistemas Robustos</h3><br>
+              <br><br><h3>Ecosistemas Robustos</h3><br>
               <p>Trabajamos con las marcas líderes del sector — <strong>ABB, Rockwell, Siemens y Schneider</strong> — cuya fiabilidad 
                 en procesos continuos críticos, ecosistemas robustos, escalabilidad y modularidad, ingeniería unificada y arquitecturas 
-                flexibles respalda nuestras soluciones con la maxima calidad. Además, ofrecen mantenimiento sencillo y cobertura global.<br><br>
-              </p>
+                flexibles respalda nuestras soluciones con la maxima calidad. Además, ofrecen mantenimiento sencillo y cobertura global.
+              </p><br><br>
             </div>
           </div>
         </div>
@@ -168,7 +184,6 @@
         <div class="row">
           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
             <div class="portfolio-item">
-              <p><br></p>
               <img src="img/cert.png" class="portfolio_img" alt="Certificados">
               <div class="item_overlay">
                 <div class="item_info"><h4 class="project_name">Acreditaciones</h4></div>
@@ -177,11 +192,13 @@
           </div>
           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
             <div class="delay-02s fadeInLeft wow animated">
-              <br><h3>Calidad Garantizada</h3><br>
-              <p>Nuestras certificaciones, enmarcadas conforme a las normas IEC 61158, IEC 61784-2 y IEC 62453-2/-3, incluyen:<strong><br>
-                <br>• PROFIBUS
-                <br>• PROFINET</strong><br><br>
-              </p>
+              <br><br><h3>Calidad Garantizada</h3><br>
+              <p>Nuestras certificaciones, enmarcadas conforme a las normas <strong>IEC 61158</strong>, <strong>IEC 61784-2</strong> y <strong>IEC 62453-2/-3</strong>, incluyen:<strong>
+                <p class="indent-1cm">
+                  • PROFIBUS<br>
+                  • PROFINET</strong>
+                </p>
+              </p><br><br>
             </div>
           </div>
         </div>
@@ -191,8 +208,7 @@
         <div class="row">
           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
             <div class="portfolio-item">
-              <p><br></p>
-              <img src="img/cert.png" class="portfolio_img" alt="Profesionales">
+              <img src="img/ota_prof_color.gif" class="portfolio_img" alt="Profesionales">
               <div class="item_overlay">
                 <div class="item_info"><h4 class="project_name">Profesionales Experimentados</h4></div>
               </div>
@@ -200,13 +216,13 @@
           </div>
           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
             <div class="delay-02s fadeInLeft wow animated">
-              <br><h3>Nuestro Equipo</h3><br>
+              <br><br><h3>Nuestro Equipo</h3><br>
               <p>Nuestros profesionales cuentan con una amplia trayectoria en la industria, diseñando e implementando soluciones 
                 de vanguardia para compañías como <strong>BHP</strong>, <strong>SQM</strong>, <strong>Gold Fields</strong>, <strong>Candelaria</strong>, <strong>Codelco</strong> y <strong>CMPC</strong>. 
                 Esta experiencia nos brinda un conocimiento profundo para abordar cualquier desafío, aplicando mejores prácticas 
                 con foco en la continuidad operativa, mejora continua y seguridad. Pilares los cuales nos respaldan y definen como un 
-                equipo experto en servicios de automatización de Tecnología Operativa (OT) industrial.<br><br>
-              </p>
+                equipo experto en servicios de automatización de Tecnología Operativa (OT) industrial.
+              </p><br><br>
             </div>
           </div>
         </div>
@@ -216,8 +232,7 @@
         <div class="row">
           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
             <div class="portfolio-item">
-              <p><br></p>
-              <img src="img/cert.png" class="portfolio_img" alt="Estandares">
+              <img src="img/ISOIEC.PNG" class="portfolio_img" alt="Estandares">
               <div class="item_overlay">
                 <div class="item_info"><h4 class="project_name">Estandares Internacionales</h4></div>
               </div>
@@ -227,15 +242,17 @@
             <div class="delay-02s fadeInLeft wow animated">
               <br><h3>Normas y/o Estandares</h3><br>
               <p>Nos alineamos con las normas internacionales más exigentes del sector, garantizando confiabilidad en estándares de comunicación, 
-                programación y ciberseguridad:<br>
-                <br><strong>• IEC 61158</strong> — Digital data communications for measurement and control — Fieldbus for use in industrial control systems.
-                <br><strong>• IEC 61784-2</strong> — Profiles for real-time networks — Part 2: Application layer protocols.
-                <br><strong>• IEC 61131-3</strong> — Programmable controllers — Part 3: Programming languages.
-                <br><strong>• IEC 62453</strong> / <strong>IEC 62453-2</strong> (anterior EN 61158) e <strong>IEC 62453-3</strong> (anterior EN 61784) — Interoperability and conformance testing.
-                <br><strong>• IEC 61508</strong> — Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems.
-                <br><strong>• IEC 61511</strong> — Functional safety — Safety instrumented systems for the process industry sector.
-                <br><strong>• IEC 62443</strong> — Industrial communication networks — Network and system security.<br><br>
-              </p>
+                programación y ciberseguridad:
+                <p class="indent-1cm">
+                  <strong>• IEC 61158</strong> — Digital data communications for measurement and control — Fieldbus for use in industrial control systems.
+                  <br><strong>• IEC 61784-2</strong> — Profiles for real-time networks — Part 2: Application layer protocols.
+                  <br><strong>• IEC 61131-3</strong> — Programmable controllers — Part 3: Programming languages.
+                  <br><strong>• IEC 62453</strong> / <strong>IEC 62453-2</strong> (anterior EN 61158) e <strong>IEC 62453-3</strong> (anterior EN 61784) — Interoperability and conformance testing.
+                  <br><strong>• IEC 61508</strong> — Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems.
+                  <br><strong>• IEC 61511</strong> — Functional safety — Safety instrumented systems for the process industry sector.
+                  <br><strong>• IEC 62443</strong> — Industrial communication networks — Network and system security.
+                </p>
+              </p><br><br>
             </div>
           </div>
         </div>
@@ -245,8 +262,7 @@
         <div class="row">
           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
             <div class="portfolio-item">
-              <p><br></p>
-              <img src="img/cert.png" class="portfolio_img" alt="Documentación">
+              <img src="img/documents.png" class="portfolio_img" alt="Documentación">
               <div class="item_overlay">
                 <div class="item_info"><h4 class="project_name">Documentación de alto nivel</h4></div>
               </div>
@@ -257,26 +273,35 @@
               <br><h3>Documentación Técnica</h3><br>
               <p>Transformamos necesidades de negocio en soluciones OT listas para operar. 
                 Nuestro equipo combina gestión de proyectos e ingeniería de alto nivel para proveer de resultados medibles, 
-                con documentación impecable y entregables técnicos que aceleran aprobación, montaje y puesta en marcha.<br>
-                <br><strong>Documentación del proyecto (end-to-end):
-                <br>&emsp;• Acta de inicio y roles, cronograma Gantt, EDT/WBS, matriz de riesgos, presupuesto.
-                <br>&emsp;• Requerimientos y especificaciones.
-                <br>&emsp;• Documentación de hardware y de software/configuración.
-                <br>&emsp;• Pruebas y validación (FAT/SAT).
-                <br>&emsp;• Manuales de operación y mantenimiento.<br>
-                <br>Entregables de diseño de solución (diagramas):
-                <br>&emsp;• PFD y diagrama de bloques de proceso.
-                <br>&emsp;• P&ID (tuberías e instrumentación).
-                <br>&emsp;• Diagramas de control (loops).
-                <br>&emsp;• FBD/SFC (bloques y secuencias).
-                <br>&emsp;• Flowcharts de procedimientos.
-                <br>&emsp;• Topología de comunicaciones y arquitectura de red.
-                <br>&emsp;• Arquitectura de sistema.
-                <br>&emsp;• Esquemas eléctricos: unifilar, multifilar/wiring.
-                <br>&emsp;• Layout de gabinete.
-                <br>&emsp;• Diseños HMI/SCADA (mockups).
-                <br>&emsp;• Matriz de alarmas y eventos.</strong><br><br>
-              </p>
+                con documentación impecable y entregables técnicos que aceleran aprobación, montaje y puesta en marcha. 
+                Asimismo, gestionamos toda la información en repositorios en la nube con respaldo automático y control de acceso, 
+                previniendo pérdidas o fuga y facilitando el intercambio seguro. <br><br>
+                - Documentación del proyecto (end-to-end):
+                <p class="indent-1cm"><strong>
+                  • Acta de inicio y roles, cronograma Gantt, EDT/WBS, matriz de riesgos, presupuesto.
+                  <br>• Requerimientos y especificaciones.
+                  <br>• Documentación de hardware y de software/configuración.
+                  <br>• Pruebas y validación (FAT/SAT).
+                  <br>• Manuales de operación y mantenimiento.</strong>
+                </p>
+                <p>
+                - Entregables de diseño de solución (diagramas):
+                </p>
+                <p class="indent-1cm"><strong>
+                  • PFD y diagrama de bloques de proceso.
+                  <br>• P&ID (tuberías e instrumentación).
+                  <br>• Diagramas de control (loops).
+                  <br>• FBD/SFC (bloques y secuencias).
+                  <br>• Flowcharts de procedimientos.
+                  <br>• Topología de comunicaciones y arquitectura de red.
+                  <br>• Arquitectura de sistema.
+                  <br>• Esquemas eléctricos: unifilar, multifilar/wiring.
+                  <br>• Layout de gabinete.
+                  <br>• Diseños HMI/SCADA (mockups).
+                  <br>• Matriz de alarmas y eventos.</strong>
+                </p>
+
+              </p><br><br>
             </div>
           </div>
         </div>
@@ -286,8 +311,7 @@
         <div class="row">
           <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
             <div class="portfolio-item">
-              <p><br></p>
-              <img src="img/cert.png" class="portfolio_img" alt="Marcos">
+              <img src="img/ota_frame_color.gif" class="portfolio_img" alt="Marcos">
               <div class="item_overlay">
                 <div class="item_info"><h4 class="project_name">Marcos Mundiales</h4></div>
               </div>
@@ -295,14 +319,14 @@
           </div>
           <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
             <div class="delay-02s fadeInLeft wow animated">
-              <br><h3>Modelos de Gestión</h3><br>
-              <p>Nuestro equipo trabaja con marcos reconocidos a nivel mundial para aplicar las mejores prácticas:<br>
+              <br><br><h3>Modelos de Gestión</h3><br>
+              <p>Nuestro equipo trabaja con marcos reconocidos a nivel mundial para aplicar las mejores prácticas:
                 <p class="indent-1cm">
-                <br><strong>• PMBOK / PRINCE2</strong>: Gobernanza y estructura del proyecto de principio a fin.
-                <br><strong>• Lean Six Sigma</strong>: Optimización operativa y mejora continua.<br>
+                  <strong>• PMBOK / PRINCE2</strong>: Gobernanza y estructura del proyecto de principio a fin.
+                  <br><strong>• Lean Six Sigma</strong>: Optimización operativa y mejora continua.
                 </p>
-                <br>Estas disciplinas nos aportan una base sólida que acelera plazos, reduce riesgos y eleva la calidad de cada uno de nuestros proyectos.<br><br>
-              </p>
+                Estas disciplinas nos aportan una base sólida que acelera plazos, reduce riesgos y eleva la calidad de cada uno de nuestros proyectos.
+              </p><br><br>
             </div>
           </div>
         </div>
