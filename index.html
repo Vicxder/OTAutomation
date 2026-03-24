@@ -1,490 +1,451 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1">
-<title>OTA Services</title>
-<link rel="icon" href="favicon.png" type="image/png">
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css"> 
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css"> 
-<link href="css/animate.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>OTA Services | Automatización OT Industrial</title>
+  <meta name="description" content="Especialistas en automatización de Tecnología Operativa (OT) para la industria minera. Sistemas DCS, ingeniería y proyectos de automatización. Más de 10 años de experiencia.">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="OTA Services | Automatización OT Industrial">
+  <meta property="og:description" content="Especialistas en automatización OT para minería e industria. DCS, ingeniería y proyectos de automatización de clase mundial.">
+  <meta property="og:type"        content="website">
+  <meta property="og:image"       content="img/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Google Fonts: solo Raleway (titulares) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+
+  <!-- Font Awesome 6 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+  <!-- Estilos personalizados -->
+  <link href="css/site.css" rel="stylesheet">
 </head>
 <body>
 
-<!--Header_section-->
-<header id="header_wrapper">
+<!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
+<header id="header">
   <div class="container">
-    <div class="header_box">
-      <div class="logo"><a href="#"><img src="img/logo.png" alt="OTA Services" width="84" height="50"
-      loading="eager" decoding="async" fetchpriority="high">
-      <!-- relación de aspecto para evitar saltos -->
-      </a></div>
-      <nav class="navbar navbar-inverse" role="navigation">
-        <div class="navbar-header">
-          <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-        </div>
-        <div id="main-nav" class="collapse navbar-collapse navStyle">
-          <ul class="nav navbar-nav" id="mainNav">
-            <li class="active"><a href="#hero_section" class="scroll-link">Inicio</a></li>
-            <li><a href="#aboutUs" class="scroll-link">Sobre Nosotros</a></li>
-            <li><a href="#service" class="scroll-link">Servicios</a></li>
-            <!-- <li><a href="#clients" class="scroll-link">Clientes</a></li>
-            <li><a href="#team" class="scroll-link">Equipo</a></li> -->
-            <li><a href="#contact" class="scroll-link">Contacto</a></li>
-            <li><a href="https://otautomationservices.sharepoint.com/" class="intranet-link" target="_blank">Intranet</a>
-            <script>
-              document.addEventListener('DOMContentLoaded', () => {
-                const intranet = document.querySelector('#mainNav .intranet-link');
-                if (!intranet) return;
-                intranet.addEventListener('click', () => {
-                  // Ejecuta después de otros handlers que puedan marcar .active
-                  setTimeout(() => {
-                    intranet.blur();                        // quita foco del enlace
-                    const li = intranet.closest('li');
-                    li && li.classList.remove('active');    // evita que quede “activo”
-                  }, 0);
-                });
-              });
-            </script></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Navegación principal">
+
+      <a class="navbar-brand" href="#hero" aria-label="OTA Services – Inicio">
+        <img src="img/logo.png" alt="OTA Services" width="84" height="50"
+             loading="eager" fetchpriority="high" decoding="async">
+      </a>
+
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+              aria-controls="mainNav"
+              aria-expanded="false"
+              aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav" id="navList">
+          <li class="nav-item active">
+            <a class="nav-link scroll-link" href="#hero">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="#aboutUs">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="#service">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-link" href="#contact">Contacto</a>
+          </li>
+          <li class="nav-item nav-intranet">
+            <a class="nav-link intranet-link"
+               href="https://otautomationservices.sharepoint.com/"
+               target="_blank"
+               rel="noopener noreferrer">Intranet</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
   </div>
 </header>
-<!--Header_section--> 
 
-<!--Hero_Section-->
-<section id="hero_section" class="fullscreen landing parallax"
-  style="background-image:url('img/ota_services_showcase.gif'); height: 22cm; width: auto; background-position: right;">
-  <div class="overlay">
+<!-- ═══════════════════════════ HERO ═════════════════════════════ -->
+<section id="hero"
+         class="hero-section"
+         style="background-image: url('img/ota_services_showcase.gif');"
+         aria-label="Presentación OTA Services">
+  <div class="hero-overlay">
     <div class="container">
-      <div class="hero_section">
-        <div class="row">
-          <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12 text-start">
-            <div class="top_left_cont delay-04s wow fadeInLeft animated">
-              <h2><strong>OT Automation Services</strong></h2>
-              <p>&emsp;Especialistas en servicios de automatización de Tecnología Operativa (OT) para la industria.
-                Nuestra visión joven del futuro, revitaliza tus proyectos de innovación para transformarlos en soluciones reales.<br>
-                <br>&emsp;Conducimos tus operaciones utilizando técnicas de vanguardia, elevando productividad, calidad y continuidad. 
-                Réstale fricción a tus procesos industriales y pon en marcha nuestros servicios.
-              </p>
-              <h4><strong>&emsp;➔ OTA SERVICES: de la idea 💡 a la operación ⚙️</strong></h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Hero_Section--> 
-
-<!--AboutUs_Section--> 
-<section id="aboutUs">
-  <div class="inner_wrapper">
-    <div class="container">
-      <h2>Sobre Nosotros</h2>
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right">
-            <p><br></p>
-            <img src="img/sellodecalidad.png" class="delay-04s wow fadeInRight animated" alt="Garantia OTA">
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left">
-            <div class="delay-02s fadeInDown wow animated">
-              <h3>Operational Technology Automation Services</h3>
-              <p>
-                <br>&emsp;• Con una visión estratégica de alto nivel, nace <strong>OTA Services</strong>. Nuestra organización constituida por miembros con más de 10 años 
-                de experiencia en el rubro minero, diseñan lógica de control e interfaces con foco en la mejora continua. 
-                Nuestra propuesta es construir infraestructuras OT/IT optimizadas para el desarrollo de las operaciones industriales.<br>
-                <br>&emsp;• Somos una empresa destinada a ofrecer soluciones integrales en automatización, 
-                especialmente para el sector minero. Nuestro equipo de ingenieros está conformado por profesionales altamente calificados. 
-                Contamos con experiencia en la ejecución, implementación y mantenimiento de proyectos de control. 
-                Brindamos soluciones personalizadas que satisfacen necesidades específicas de nuestros clientes, 
-                trabajando bajo estrictos estándares de calidad, seguridad y medio ambiente.<br>
-                <br>&emsp;• Promovemos la innovación tecnológica mediante el uso de equipos de última generación y fomentamos una cultura preventiva 
-                en toda la organización. Nuestra meta es construir relaciones duraderas basadas en confianza, transparencia y excelencia técnica. 
-                Lo que nos aporta un sello de calidad distintivo y nos motiva a progresar continuamente.
-              </p>
-            </div>
-            <div class="work_bottom"> <span>¿Quieres saber más?</span> <a href="#contact" class="contact_btn">Contáctanos</a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--AboutUs_Section--> 
-
-<!--Service-->
-<section id="service">
-  <div class="container">
-    <h2>Servicios</h2>
-    <div class="service_wrapper">
       <div class="row">
-        <div class="col-lg-4">
-          <div class="service_block">
-            <div class="service_icon delay-02s animated wow zoomIn"> <span><i class="fa fa-wrench"></i></span> </div>
-            <h3 class="animated fadeInUp wow">Sistemas de Control</h3>
-            <p class="animated fadeInDown wow">Suministramos, integramos y configuramos sistemas como DCS 800xA ABB, Symphony+, Bailey, Rockwell, PlantPAx, Siemens, entre otros. Nuestros ingenieros diseñan soluciones a medida con estándares industriales.<br><br><br></p>
-          </div>
-        </div>
-        <div class="col-lg-4 borderLeft">
-          <div class="service_block">
-            <div class="service_icon icon2 delay-02s animated wow zoomIn"> <span><i class="fa fa-lightbulb-o"></i></span> </div>
-            <h3 class="animated fadeInUp wow">Ingeniería</h3>
-            <p class="animated fadeInDown wow">Desarrollamos ingeniería conceptual, básica y de detalles con documentación técnica completa. Ofrecemos soluciones personalizadas cumpliendo normas y asegurando calidad en cada etapa.<br><br><br></p>
-          </div>
-        </div>
-        <div class="col-lg-4 borderLeft">
-          <div class="service_block">
-            <div class="service_icon icon3 delay-02s animated wow zoomIn"> <span><i class="fa fa-cogs"></i></span> </div>
-            <h3 class="animated fadeInUp wow">Proyectos de Automatización</h3>
-            <p class="animated fadeInDown wow">Del plan a la operación: Transformamos ideas en proyectos automatizados. Diseñamos, programamos e implementamos sistemas robustos, flexibles, seguros y escalables para cualquier industria.</p>
+        <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+          <div class="hero-content reveal from-left">
+            <h2><strong>OT Automation Services</strong></h2>
+            <p>&emsp;Especialistas en servicios de automatización de Tecnología Operativa (OT) para la
+              industria. Nuestra visión joven del futuro revitaliza tus proyectos de innovación para
+              transformarlos en soluciones reales.</p>
+            <p>&emsp;Conducimos tus operaciones utilizando técnicas de vanguardia, elevando
+              productividad, calidad y continuidad. Réstale fricción a tus procesos industriales
+              y pon en marcha nuestros servicios.</p>
+            <h4><strong>&emsp;➔ OTA SERVICES: de la idea 💡 a la operación ⚙️</strong></h4>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--/Service-->
 
-<!--Portfolio-->
-<section id="Portfolio">
-  <div class="inner_wrapper">
-    <div class="container">
-      <h2>¿Por qué elegirnos?</h2>
-      <!-- ITEM 1 -->
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
-            <p><div class="portfolio-item">
-              <img src="img/marcas.png" class="portfolio_img" alt="Ecosistemas">
-              <div class="item_overlay">
-                <div class="item_info"><h4 class="project_name">Fabricantes de nivel mundial</h4></div>
-              </div>
-            </div></p>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
-            <p><div class="delay-02s fadeInLeft wow animated">
-              <h3>Ecosistemas Robustos</h3><br>
-              <p>Trabajamos con las marcas líderes del sector — <strong>ABB, Rockwell, Siemens y Schneider</strong> — cuya fiabilidad 
-                en procesos continuos críticos, ecosistemas robustos, escalabilidad y modularidad, ingeniería unificada y arquitecturas 
-                flexibles respalda nuestras soluciones con la maxima calidad. Además, ofrecen mantenimiento sencillo y cobertura global.
-              </p><br>
-            </div></p>
+<!-- ═══════════════════════════ SOBRE NOSOTROS ═══════════════════ -->
+<section id="aboutUs" aria-labelledby="about-title">
+  <div class="container">
+    <h2 id="about-title">Sobre Nosotros</h2>
+    <div class="about-inner">
+      <div class="row align-items-start g-4">
+
+        <div class="col-lg-6 col-md-6 col-12 order-md-2 reveal from-right">
+          <img src="img/sellodecalidad.png"
+               alt="Sello de calidad OTA Services"
+               loading="lazy"
+               class="img-fluid">
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-12 order-md-1 reveal from-left">
+          <h3>Operational Technology Automation Services</h3>
+          <p><br>&emsp;• Con una visión estratégica de alto nivel, nace <strong>OTA Services</strong>.
+            Nuestra organización, constituida por miembros con más de 10 años de experiencia en el rubro
+            minero, diseña lógica de control e interfaces con foco en la mejora continua. Nuestra
+            propuesta es construir infraestructuras OT/IT optimizadas para el desarrollo de las
+            operaciones industriales.</p>
+          <p>&emsp;• Somos una empresa destinada a ofrecer soluciones integrales en automatización,
+            especialmente para el sector minero. Nuestro equipo de ingenieros está conformado por
+            profesionales altamente calificados con experiencia en la ejecución, implementación y
+            mantenimiento de proyectos de control. Brindamos soluciones personalizadas que satisfacen
+            las necesidades específicas de nuestros clientes, trabajando bajo estrictos estándares de
+            calidad, seguridad y medio ambiente.</p>
+          <p>&emsp;• Promovemos la innovación tecnológica mediante el uso de equipos de última
+            generación y fomentamos una cultura preventiva en toda la organización. Nuestra meta es
+            construir relaciones duraderas basadas en confianza, transparencia y excelencia técnica.</p>
+          <div class="work-bottom">
+            <span>¿Quieres saber más?</span>
+            <a href="#contact" class="contact-btn scroll-link" aria-label="Ir al formulario de contacto">Contáctanos</a>
           </div>
         </div>
-      </div>
-      <!-- ITEM 2 -->
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
-            <p><div class="portfolio-item">
-              <img src="img/cert.png" class="portfolio_img" alt="Certificados">
-              <div class="item_overlay">
-                <div class="item_info"><h4 class="project_name">Acreditaciones</h4></div>
-              </div>
-            </div></p>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
-            <p><div class="delay-02s fadeInLeft wow animated">
-              <h3>Calidad Garantizada</h3><br>
-              <p>Nuestras certificaciones, enmarcadas conforme a las normas <strong>IEC 61158</strong>, <strong>IEC 61784-2</strong> y <strong>IEC 62453-2/-3</strong>, incluyen:<strong>
-                <p class="indent-1cm">
-                  • PROFIBUS<br>
-                  • PROFINET</strong>
-                </p>
-              </p><br>
-            </div></p>
-          </div>
-        </div>
-      </div>
-      <!-- ITEM 3 -->
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
-            <p><div class="portfolio-item">
-              <img src="img/ota_prof_color.gif" class="portfolio_img" alt="Profesionales">
-              <div class="item_overlay">
-                <div class="item_info"><h4 class="project_name">Profesionales Experimentados</h4></div>
-              </div>
-            </div></p>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
-            <p><div class="delay-02s fadeInLeft wow animated">
-              <h3>Nuestro Equipo</h3><br>
-              <p>Nuestros profesionales cuentan con una amplia trayectoria en la industria, diseñando e implementando soluciones 
-                de vanguardia para compañías como <strong>BHP</strong>, <strong>SQM</strong>, <strong>Gold Fields</strong>, <strong>Candelaria</strong>, <strong>Codelco</strong> y <strong>CMPC</strong>. 
-                Esta experiencia nos brinda un conocimiento profundo para abordar cualquier desafío, aplicando mejores prácticas 
-                con foco en la continuidad operativa, mejora continua y seguridad. Pilares los cuales nos respaldan y definen como un 
-                equipo experto en servicios de automatización de Tecnología Operativa (OT) industrial.
-              </p><br>
-            </div></p>
-          </div>
-        </div>
-      </div>
-      <!-- ITEM 4 -->
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
-            <p><div class="portfolio-item">
-              <img src="img/ISOIEC.PNG" class="portfolio_img" alt="Estandares">
-              <div class="item_overlay">
-                <div class="item_info"><h4 class="project_name">Estandares Internacionales</h4></div>
-              </div>
-            </div></p>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
-            <p><div class="delay-02s fadeInLeft wow animated">
-              <h3>Normas y/o Estandares</h3><br>
-              <p>Nos alineamos con las normas internacionales más exigentes del sector, garantizando confiabilidad en estándares de comunicación, 
-                programación y ciberseguridad:
-                <p class="indent-1cm">
-                  <strong>• IEC 61158</strong> — Digital data communications for measurement and control — Fieldbus for use in industrial control systems.
-                  <br><strong>• IEC 61784-2</strong> — Profiles for real-time networks — Part 2: Application layer protocols.
-                  <br><strong>• IEC 61131-3</strong> — Programmable controllers — Part 3: Programming languages.
-                  <br><strong>• IEC 62453</strong> / <strong>IEC 62453-2</strong> (anterior EN 61158) e <strong>IEC 62453-3</strong> (anterior EN 61784) — Interoperability and conformance testing.
-                  <br><strong>• IEC 61508</strong> — Functional Safety of Electrical/Electronic/Programmable Electronic Safety-related Systems.
-                  <br><strong>• IEC 61511</strong> — Functional safety — Safety instrumented systems for the process industry sector.
-                  <br><strong>• IEC 62443</strong> — Industrial communication networks — Network and system security.
-                </p>
-              </p><br>
-            </div></p>
-          </div>
-        </div>
-      </div>
-      <!-- ITEM 5 -->
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
-            <p><div class="portfolio-item">
-              <img src="img/documents.png" class="portfolio_img" alt="Documentación">
-              <div class="item_overlay">
-                <div class="item_info"><h4 class="project_name">Documentación de alto nivel</h4></div>
-              </div>
-            </div></p>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
-            <p><div class="delay-02s fadeInLeft wow animated">
-              <h3>Documentación Técnica</h3><br>
-              <p>Transformamos necesidades de negocio en soluciones OT listas para operar. 
-                Nuestro equipo combina gestión de proyectos e ingeniería de alto nivel para proveer de resultados medibles, 
-                con documentación impecable y entregables técnicos que aceleran aprobación, montaje y puesta en marcha. 
-                Asimismo, gestionamos toda la información en repositorios en la nube con respaldo automático y control de acceso, 
-                previniendo pérdidas o fuga y facilitando el intercambio seguro. <br><br>
-                - Documentación del proyecto (end-to-end):
-                <p class="indent-1cm"><strong>
-                  • Acta de inicio y roles, cronograma Gantt, EDT/WBS, matriz de riesgos, presupuesto.
-                  <br>• Requerimientos y especificaciones.
-                  <br>• Documentación de hardware y de software/configuración.
-                  <br>• Pruebas y validación (FAT/SAT).
-                  <br>• Manuales de operación y mantenimiento.</strong>
-                </p>
-                <p>
-                - Entregables de diseño de solución (diagramas):
-                </p>
-                <p class="indent-1cm"><strong>
-                  • PFD y diagrama de bloques de proceso.
-                  <br>• P&ID (tuberías e instrumentación).
-                  <br>• Diagramas de control (loops).
-                  <br>• FBD/SFC (bloques y secuencias).
-                  <br>• Flowcharts de procedimientos.
-                  <br>• Topología de comunicaciones y arquitectura de red.
-                  <br>• Arquitectura de sistema.
-                  <br>• Esquemas eléctricos: unifilar, multifilar/wiring.
-                  <br>• Layout de gabinete.
-                  <br>• Diseños HMI/SCADA (mockups).
-                  <br>• Matriz de alarmas y eventos.</strong>
-                </p>
-              </p><br>
-            </div></p>
-          </div>
-        </div>
-      </div>
-      <!-- ITEM 6 -->
-      <div class="inner_section">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 pull-left delay-04s wow fadeInRight animated isotope">
-            <p><div class="portfolio-item">
-              <img src="img/ota_frame_color.gif" class="portfolio_img" alt="Marcos">
-              <div class="item_overlay">
-                <div class="item_info"><h4 class="project_name">Marcos Mundiales</h4></div>
-              </div>
-            </div></p>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-right">
-            <p><div class="delay-02s fadeInLeft wow animated">
-              <h3>Modelos de Gestión</h3><br>
-              <p>Nuestro equipo trabaja con marcos reconocidos a nivel mundial para aplicar las mejores prácticas:
-                <p class="indent-1cm">
-                  <strong>• PMBOK / PRINCE2</strong>: Gobernanza y estructura del proyecto de principio a fin.
-                  <br><strong>• Lean Six Sigma</strong>: Optimización operativa y mejora continua.
-                </p>
-                Estas disciplinas nos aportan una base sólida que acelera plazos, reduce riesgos y eleva la calidad de cada uno de nuestros proyectos.
-              </p>
-            </div></p>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
 </section>
-<!--Portfolio-->
 
-<!--Clients-->
-<!-- <h2>Clientes</h2>
-<div class="client_logos">
+<!-- ═══════════════════════════ SERVICIOS ════════════════════════ -->
+<section id="service" aria-labelledby="service-title">
   <div class="container">
-    <div class="logos_slider">
-      <ul class="logo-track">
-        <li><img src="img/client_logo1.png" alt=""></li>
-        <li><img src="img/client_logo2.png" alt=""></li>
-        <li><img src="img/client_logo3.png" alt=""></li>
-        <li><img src="img/client_logo4.png" alt=""></li>
-        <li><img src="img/client_logo1.png" alt=""></li>
-        <li><img src="img/client_logo2.png" alt=""></li>
-        <li><img src="img/client_logo3.png" alt=""></li>
-        <li><img src="img/client_logo4.png" alt=""></li>
-      </ul>
+    <h2 id="service-title">Servicios</h2>
+    <div class="row service-wrapper">
+
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="service-block reveal zoom">
+          <div class="service-icon" aria-hidden="true">
+            <i class="fa fa-wrench" title="Sistemas de Control"></i>
+          </div>
+          <h3>Sistemas de Control</h3>
+          <p>Suministramos, integramos y configuramos sistemas como DCS 800xA ABB, Symphony+, Bailey,
+            Rockwell, PlantPAx, Siemens, entre otros. Nuestros ingenieros diseñan soluciones a medida
+            con estándares industriales.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="service-block border-left-divider reveal zoom">
+          <div class="service-icon" aria-hidden="true">
+            <i class="fa fa-lightbulb" title="Ingeniería"></i>
+          </div>
+          <h3>Ingeniería</h3>
+          <p>Desarrollamos ingeniería conceptual, básica y de detalles con documentación técnica
+            completa. Ofrecemos soluciones personalizadas cumpliendo normas y asegurando calidad
+            en cada etapa.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="service-block border-left-divider reveal zoom">
+          <div class="service-icon" aria-hidden="true">
+            <i class="fa fa-cogs" title="Proyectos de Automatización"></i>
+          </div>
+          <h3>Proyectos de Automatización</h3>
+          <p>Del plan a la operación: transformamos ideas en proyectos automatizados. Diseñamos,
+            programamos e implementamos sistemas robustos, flexibles, seguros y escalables para
+            cualquier industria.</p>
+        </div>
+      </div>
+
     </div>
   </div>
-</div> -->
-<!--Clients-->
+</section>
 
-<!--Team-->
-<!-- <section class="page_section team" id="team">
+<!-- ═══════════════════════════ POR QUÉ ELEGIRNOS ════════════════ -->
+<section id="portfolio" aria-labelledby="portfolio-title">
   <div class="container">
-    <h2>Equipo</h2>
-    <h6>Profesionales con alta experiencia en automatización industrial.</h6>
-    <div class="team-text-list">
-      <div class="team-member">
-        <h4>temp</h4>
-        <p><strong>Ingeniero de Control</strong><br>
-        Especialista en sistemas DCS, con sólida experiencia en minería y automatización avanzada.</p>
-      </div>
-      <div class="team-member">
-        <h4>temp</h4>
-        <p><strong>Desarrollador Industrial</strong><br>
-        Encargado de programación y diseño de soluciones automatizadas a medida.</p>
-      </div>
-      <div class="team-member">
-        <h4>temp</h4>
-        <p><strong>Especialista en Proyectos</strong><br>
-        Amplia trayectoria liderando proyectos de automatización e implementación en terreno.</p>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!--Team-->
+    <h2 id="portfolio-title">¿Por qué elegirnos?</h2>
 
-<!--Contacto-->
-<footer class="footer_wrapper" id="contact">
-  <div class="container">
-    <!-- <section class="page_section contact" id="contact">
-      <div class="contact_section">
-        <h2>Contáctanos</h2>
-        <div class="row">
-          <div class="col-lg-12 wow fadeInLeft delay-06s">
-            <div class="form">
-              <input class="input-text" type="text" name="" placeholder="Tu nombre *">
-              <input class="input-text" type="text" name="" placeholder="Tu correo electrónico *">
-              <textarea class="input-text text-area" rows="4" placeholder="Tu mensaje *"></textarea>
-              <input class="input-btn" type="submit" value="Enviar mensaje">
-            </div>
+    <!-- Item 1 – Ecosistemas Robustos -->
+    <div class="why-item row align-items-center g-4">
+      <div class="col-md-5 col-12 reveal from-right">
+        <div class="portfolio-item">
+          <img src="img/marcas.png"
+               class="img-fluid"
+               alt="Logos de fabricantes líderes: ABB, Rockwell, Siemens y Schneider"
+               loading="lazy">
+          <div class="item-overlay" aria-hidden="true">
+            <h4>Fabricantes de nivel mundial</h4>
           </div>
         </div>
       </div>
-    </section> -->
+      <div class="col-md-7 col-12 reveal from-left">
+        <h3>Ecosistemas Robustos</h3>
+        <p>Trabajamos con las marcas líderes del sector — <strong>ABB, Rockwell, Siemens y
+          Schneider</strong> — cuya fiabilidad en procesos continuos críticos, ecosistemas robustos,
+          escalabilidad y modularidad respalda nuestras soluciones con la máxima calidad. Además,
+          ofrecen mantenimiento sencillo y cobertura global.</p>
+      </div>
+    </div>
 
-    <!--ContactSection-->
-    <section class="page_section contact" id="contact">
-      <div class="contact_section">
-        <h2>Contáctanos</h2>
-        <div class="row">
-          <div class="col-lg-12 wow fadeInLeft delay-06s">
-            <form id="contactForm" class="form">
-              <input class="input-text" type="text" name="name" placeholder="Tu nombre *" required>
-              <input class="input-text" type="email" name="email" inputmode="email" placeholder="Tu correo electrónico *" required>
-              <input class="input-text" type="text" name="company" placeholder="Tu empresa *" required>
-
-              <!-- honeypot (anti-bots) -->
-              <input type="text" name="country" style="display:none">
-
-              <textarea class="input-text text-area" name="message" rows="4" placeholder="Tu mensaje *" required></textarea>
-              <button class="input-btn" type="submit" id="sendBtn">Enviar mensaje</button>
-              <p id="formMsg" style="margin-top:10px;"></p>
-            </form>
+    <!-- Item 2 – Calidad Garantizada -->
+    <div class="why-item row align-items-center g-4">
+      <div class="col-md-5 col-12 reveal from-right">
+        <div class="portfolio-item">
+          <img src="img/cert.png"
+               class="img-fluid"
+               alt="Certificaciones PROFIBUS y PROFINET"
+               loading="lazy">
+          <div class="item-overlay" aria-hidden="true">
+            <h4>Acreditaciones</h4>
           </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-12 reveal from-left">
+        <h3>Calidad Garantizada</h3>
+        <p>Nuestras certificaciones, enmarcadas conforme a las normas <strong>IEC 61158</strong>,
+          <strong>IEC 61784-2</strong> y <strong>IEC 62453-2/-3</strong>, incluyen:</p>
+        <p class="indent-1cm"><strong>• PROFIBUS<br>• PROFINET</strong></p>
+      </div>
+    </div>
+
+    <!-- Item 3 – Nuestro Equipo -->
+    <div class="why-item row align-items-center g-4">
+      <div class="col-md-5 col-12 reveal from-right">
+        <div class="portfolio-item">
+          <img src="img/ota_prof_color.gif"
+               class="img-fluid"
+               alt="Equipo de profesionales OTA Services"
+               loading="lazy">
+          <div class="item-overlay" aria-hidden="true">
+            <h4>Profesionales Experimentados</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-12 reveal from-left">
+        <h3>Nuestro Equipo</h3>
+        <p>Nuestros profesionales cuentan con amplia trayectoria en la industria, diseñando e
+          implementando soluciones de vanguardia para compañías como <strong>BHP</strong>,
+          <strong>SQM</strong>, <strong>Gold Fields</strong>, <strong>Candelaria</strong>,
+          <strong>Codelco</strong> y <strong>CMPC</strong>. Esta experiencia nos brinda un
+          conocimiento profundo para abordar cualquier desafío con foco en la continuidad operativa,
+          mejora continua y seguridad.</p>
+      </div>
+    </div>
+
+    <!-- Item 4 – Normas y Estándares -->
+    <div class="why-item row align-items-center g-4">
+      <div class="col-md-5 col-12 reveal from-right">
+        <div class="portfolio-item">
+          <img src="img/ISOIEC.PNG"
+               class="img-fluid"
+               alt="Estándares internacionales IEC"
+               loading="lazy">
+          <div class="item-overlay" aria-hidden="true">
+            <h4>Estándares Internacionales</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-12 reveal from-left">
+        <h3>Normas y/o Estándares</h3>
+        <p>Nos alineamos con las normas internacionales más exigentes del sector:</p>
+        <p class="indent-1cm">
+          <strong>• IEC 61158</strong> — Digital data communications for measurement and control.<br>
+          <strong>• IEC 61784-2</strong> — Profiles for real-time networks.<br>
+          <strong>• IEC 61131-3</strong> — Programmable controllers — Programming languages.<br>
+          <strong>• IEC 62453 / 62453-2 / 62453-3</strong> — Interoperability and conformance testing.<br>
+          <strong>• IEC 61508</strong> — Functional Safety of E/E/PE Safety-related Systems.<br>
+          <strong>• IEC 61511</strong> — Safety instrumented systems for the process industry.<br>
+          <strong>• IEC 62443</strong> — Industrial communication networks — Network and system security.
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 5 – Documentación Técnica -->
+    <div class="why-item row align-items-center g-4">
+      <div class="col-md-5 col-12 reveal from-right">
+        <div class="portfolio-item">
+          <img src="img/documents.png"
+               class="img-fluid"
+               alt="Documentación técnica completa de proyectos OT"
+               loading="lazy">
+          <div class="item-overlay" aria-hidden="true">
+            <h4>Documentación de alto nivel</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-12 reveal from-left">
+        <h3>Documentación Técnica</h3>
+        <p>Transformamos necesidades de negocio en soluciones OT listas para operar. Gestionamos
+          la información en repositorios en la nube con respaldo automático y control de acceso.</p>
+        <p>- Documentación del proyecto (end-to-end):</p>
+        <p class="indent-1cm"><strong>
+          • Acta de inicio y roles, cronograma Gantt, EDT/WBS, matriz de riesgos, presupuesto.<br>
+          • Requerimientos y especificaciones.<br>
+          • Documentación de hardware y de software/configuración.<br>
+          • Pruebas y validación (FAT/SAT).<br>
+          • Manuales de operación y mantenimiento.
+        </strong></p>
+        <p>- Entregables de diseño de solución (diagramas):</p>
+        <p class="indent-1cm"><strong>
+          • PFD y diagrama de bloques de proceso.<br>
+          • P&amp;ID (tuberías e instrumentación).<br>
+          • Diagramas de control (loops) y FBD/SFC.<br>
+          • Topología de comunicaciones y arquitectura de red.<br>
+          • Esquemas eléctricos: unifilar, multifilar/wiring.<br>
+          • Layout de gabinete y diseños HMI/SCADA (mockups).<br>
+          • Matriz de alarmas y eventos.
+        </strong></p>
+      </div>
+    </div>
+
+    <!-- Item 6 – Modelos de Gestión -->
+    <div class="why-item row align-items-center g-4">
+      <div class="col-md-5 col-12 reveal from-right">
+        <div class="portfolio-item">
+          <img src="img/ota_frame_color.gif"
+               class="img-fluid"
+               alt="Marcos de gestión PMBOK, PRINCE2 y Lean Six Sigma"
+               loading="lazy">
+          <div class="item-overlay" aria-hidden="true">
+            <h4>Marcos Mundiales</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-12 reveal from-left">
+        <h3>Modelos de Gestión</h3>
+        <p>Nuestro equipo trabaja con marcos reconocidos a nivel mundial:</p>
+        <p class="indent-1cm">
+          <strong>• PMBOK / PRINCE2</strong>: Gobernanza y estructura del proyecto de principio a fin.<br>
+          <strong>• Lean Six Sigma</strong>: Optimización operativa y mejora continua.
+        </p>
+        <p>Estas disciplinas aceleran plazos, reducen riesgos y elevan la calidad de cada proyecto.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════ CONTACTO / FOOTER ════════════════ -->
+<footer class="footer-wrapper" id="contact" role="contentinfo">
+  <div class="container">
+
+    <section class="contact-section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contáctanos</h2>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 col-12 mx-auto reveal from-left">
+
+          <form id="contactForm"
+                class="contact-form"
+                novalidate
+                aria-label="Formulario de contacto OTA Services">
+
+            <label for="f-name" class="visually-hidden">Tu nombre</label>
+            <input id="f-name"
+                   class="input-field"
+                   type="text"
+                   name="name"
+                   placeholder="Tu nombre *"
+                   required
+                   autocomplete="name">
+
+            <label for="f-email" class="visually-hidden">Tu correo electrónico</label>
+            <input id="f-email"
+                   class="input-field"
+                   type="email"
+                   name="email"
+                   placeholder="Tu correo electrónico *"
+                   required
+                   autocomplete="email"
+                   inputmode="email">
+
+            <label for="f-company" class="visually-hidden">Tu empresa</label>
+            <input id="f-company"
+                   class="input-field"
+                   type="text"
+                   name="company"
+                   placeholder="Tu empresa *"
+                   required
+                   autocomplete="organization">
+
+            <!-- Honeypot anti-spam (invisible para humanos) -->
+            <input type="text"
+                   name="country"
+                   style="display:none"
+                   tabindex="-1"
+                   autocomplete="off"
+                   aria-hidden="true">
+
+            <label for="f-message" class="visually-hidden">Tu mensaje</label>
+            <textarea id="f-message"
+                      class="input-field textarea"
+                      name="message"
+                      rows="5"
+                      placeholder="Tu mensaje *"
+                      required></textarea>
+
+            <button class="submit-btn" type="submit" id="sendBtn">Enviar mensaje</button>
+            <p id="formMsg"
+               role="status"
+               aria-live="polite"
+               style="margin-top: 0.75rem;"></p>
+
+          </form>
         </div>
       </div>
     </section>
-    <!--ContactSection-->
 
-    <!--ScriptContactSection-->
-    <script>
-    (function(){
-      const form = document.getElementById('contactForm');
-      const msg  = document.getElementById('formMsg');
-      const btn  = document.getElementById('sendBtn');
-
-      const FLOW_URL = 'https://prod-13.brazilsouth.logic.azure.com:443/workflows/349dbb5b199e45e9a58440b2abc4be60/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QH-Q445szrj_EDvWcaPgqbsn1N8RVWZEZ-GYkS-f7ME'; // Pega aquí tu URL
-      const API_KEY  = 'Dorel.,2025#.OTA'; // Debe coincidir con el del flujo
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        msg.textContent = '';
-        btn.disabled = true; btn.textContent = 'Enviando…';
-
-        // Toma los datos del formulario
-        const data = Object.fromEntries(new FormData(form).entries());
-        // Agrega la clave y preserva el honeypot (country)
-        data.apiKey = API_KEY;
-
-        try {
-          const res = await fetch(FLOW_URL, {
-            method: 'POST',
-            headers: { 'Content-Type':'application/json' },
-            body: JSON.stringify(data)
-          });
-
-          // Si tu flujo devuelve 200 y JSON {ok:true}
-          if (res.ok) {
-            msg.style.color = '#0a7d28';
-            msg.textContent = '¡Gracias! Hemos recibido tu mensaje.';
-            form.reset();
-          } else {
-            throw new Error('Error al enviar. Intenta nuevamente.');
-          }
-        } catch (err) {
-          // Si ves un error de CORS, revisa los headers del Response en el flujo
-          msg.style.color = '#b00020';
-          msg.textContent = err.message || 'No se pudo enviar el mensaje.';
-        } finally {
-          btn.disabled = false; btn.textContent = 'Enviar mensaje';
-        }
-      });
-    })();
-    </script>
-    <!--ScriptContactSection-->
-
-    <!--Footer-->
-    <div class="footer_bottom">
+    <div class="footer-bottom">
       <span>© 2025 OT Automation. Todos los derechos reservados.</span>
     </div>
+
   </div>
 </footer>
-<!--Contacto-->
 
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-scrolltofixed.js"></script>
-<script src="js/jquery.nav.js"></script> 
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.isotope.js"></script>
-<script src="js/wow.js"></script> 
-<script src="js/custom.js"></script>
+<!-- Bootstrap 5 JS (bundle incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmGnFAiBQxaQtZn3IAhWjCrXJSer"
+        crossorigin="anonymous"></script>
+
+<!-- Lógica personalizada -->
+<script src="js/site.js"></script>
 
 </body>
 </html>

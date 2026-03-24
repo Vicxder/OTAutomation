@@ -1,0 +1,387 @@
+/*
+  OTA Services – Custom Stylesheet
+  Palette: #005490 (azul), #222 (oscuro), #888 (gris), #efefef (bg servicios), #232323 (footer)
+  Fonts: Raleway (títulos), system-ui (cuerpo)
+*/
+
+/* ─── Variables ──────────────────────────────────────────── */
+:root {
+  --primary:       #005490;
+  --dark:          #222222;
+  --gray:          #888888;
+  --light-gray:    #dadada;
+  --services-bg:   #efefef;
+  --footer-bg:     #232323;
+  --font-heading:  'Raleway', sans-serif;
+  --transition:    0.25s ease-in-out;
+}
+
+/* ─── Base ───────────────────────────────────────────────── */
+html  { scroll-behavior: smooth; }
+
+body  {
+  font-family: system-ui, -apple-system, 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: var(--gray);
+  margin: 0;
+}
+
+img  { max-width: 100%; height: auto; }
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--dark);
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 1.15rem;
+  margin: 0 0 0.6rem;
+}
+
+p { line-height: 1.75; margin: 0 0 0.75rem; }
+
+.indent-1cm { margin-left: 1cm; }
+
+a { text-decoration: none; }
+
+/* ─── Header ─────────────────────────────────────────────── */
+#header {
+  background: #000;
+  padding: 0.875rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: box-shadow var(--transition);
+}
+
+#header.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Bootstrap 5 navbar overrides */
+#header .navbar { padding: 0; }
+
+#header .navbar-brand { padding: 0; line-height: 1; }
+
+#header .navbar-dark .navbar-nav .nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+  transition: color var(--transition), background var(--transition);
+}
+
+#header .navbar-dark .navbar-nav .nav-link:hover,
+#header .navbar-dark .navbar-nav .nav-link:focus {
+  color: var(--primary);
+  background: transparent;
+}
+
+#header .navbar-dark .navbar-nav .nav-item.active .nav-link {
+  color: #fff;
+  background: var(--primary);
+}
+
+#header .nav-intranet { margin-left: 1.5rem; }
+
+#header .navbar-toggler { border-color: transparent; padding: 0.25rem 0.5rem; }
+
+#header .navbar-toggler:focus { box-shadow: none; }
+
+/* ─── Hero ───────────────────────────────────────────────── */
+.hero-section {
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  position: relative;
+}
+
+/* Parallax solo en desktop (iOS ignora background-attachment:fixed) */
+@media (min-width: 769px) {
+  .hero-section { background-attachment: fixed; }
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+  color: #fff;
+}
+
+.hero-content h2 {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  color: var(--light-gray);
+  line-height: 1.75;
+}
+
+.hero-content h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+/* ─── About ──────────────────────────────────────────────── */
+#aboutUs { padding: 4rem 0; }
+
+.about-inner { padding-top: 1.5rem; }
+
+.work-bottom { padding: 1.5rem 0 0; }
+
+.work-bottom span {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  width: 176px;
+  height: 49px;
+  line-height: 45px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 3px;
+  background: #fff;
+  transition: background var(--transition), color var(--transition);
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ─── Services ───────────────────────────────────────────── */
+#service {
+  padding: 4rem 0;
+  background: var(--services-bg);
+}
+
+.service-wrapper { padding: 2rem 0 1rem; }
+
+.service-block {
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+}
+
+.service-icon {
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition);
+}
+
+.service-icon:hover { background: var(--primary); }
+.service-icon:hover i { color: #fff; }
+
+.service-icon i {
+  color: var(--primary);
+  font-size: 2.25rem;
+  transition: color var(--transition);
+}
+
+.service-block h3 {
+  font-size: 1.0625rem;
+  margin: 0.75rem 0;
+  color: #111;
+}
+
+.service-block p {
+  font-size: 0.9375rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+.border-left-divider {
+  border-left: 1px solid var(--light-gray);
+}
+
+/* ─── Why Us / Portfolio ─────────────────────────────────── */
+#portfolio { padding: 4rem 0; }
+
+.why-item {
+  padding: 3rem 0 2rem;
+  border-top: 1px solid #eee;
+}
+
+.why-item:first-of-type { border-top: none; }
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.portfolio-item img {
+  display: block;
+  width: 100%;
+  transition: opacity 0.35s;
+}
+
+.portfolio-item:hover img { opacity: 0.7; }
+
+.item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.35s;
+}
+
+.portfolio-item:hover .item-overlay { opacity: 1; }
+
+.item-overlay h4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9375rem;
+  text-align: center;
+  padding: 0 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Contact / Footer ───────────────────────────────────── */
+.footer-wrapper { background: var(--footer-bg); }
+
+.contact-section { padding: 5rem 0 3rem; }
+
+.contact-section h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-form { padding: 0 1.5rem; }
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9375rem;
+  color: #aaa;
+  background: transparent;
+  margin-bottom: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+              0 0 8px rgba(124, 197, 118, 0.35);
+}
+
+.input-field.textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+.submit-btn {
+  width: 175px;
+  height: 50px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  transition: background var(--transition), color var(--transition);
+}
+
+.submit-btn:hover  { background: #fff; color: var(--dark); }
+.submit-btn:focus  { outline: 3px solid rgba(0, 84, 144, 0.5); }
+.submit-btn:disabled { opacity: 0.65; cursor: not-allowed; }
+
+.footer-bottom {
+  border-top: 1px solid #3c3a3a;
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.875rem;
+}
+
+/* ─── Scroll animations (reemplazo de WOW.js) ───────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.from-left  { transform: translateX(-40px); }
+.reveal.from-right { transform: translateX(40px);  }
+.reveal.zoom       { transform: scale(0.88);        }
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respeta preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { transition: none; opacity: 1; transform: none; }
+}
+
+/* ─── Media Queries ──────────────────────────────────────── */
+@media (max-width: 991px) {
+  #header .nav-intranet { margin-left: 0; }
+}
+
+@media (max-width: 768px) {
+  h2                    { font-size: 1.75rem; }
+  .hero-content h2      { font-size: 1.65rem; }
+  .border-left-divider  { border-left: none; border-top: 1px solid var(--light-gray); padding-top: 1.5rem; margin-top: 1rem; }
+  .contact-form         { padding: 0; }
+  .why-item .col-md-5   { margin-bottom: 1.25rem; }
+  .service-block        { margin-bottom: 1.5rem; }
+  .contact-section      { padding: 3.5rem 0 2rem; }
+  .about-inner          { padding-top: 0; }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay         { padding: 3.5rem 0; }
+  .why-item             { padding: 2rem 0 1rem; }
+}
