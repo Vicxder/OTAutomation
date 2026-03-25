@@ -167,17 +167,17 @@ a   { text-decoration: none; }
 }
 
 /* ─── HERO ────────────────────────────────────────────────── */
-#hero {
+.hero-section {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background-image: url('../img/pantalla1.jpg');
+  background-size: cover;
+  background-position: center;
   position: relative;
-  overflow: hidden;
-  background: #0d0d0d url('img/pantalla1.jpg') center/cover no-repeat;
 }
 
-/* Dark overlay */
-#hero::after {
+.hero-section::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -185,23 +185,9 @@ a   { text-decoration: none; }
   z-index: 0;
 }
 
-/* Subtle grid texture */
-#hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(14, 165, 233, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(14, 165, 233, 0.04) 1px, transparent 1px);
-  background-size: 50px 50px;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero-inner {
+.hero-section .container {
   position: relative;
-  z-index: 2;
-  padding: 9rem 0 5rem;
+  z-index: 1;
 }
 
 .hero-img {
@@ -591,16 +577,16 @@ a   { text-decoration: none; }
 }
 
 .marca-rockwell {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  color: #888;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.45);
   transition: color 0.3s;
   cursor: default;
   display: inline-block;
 }
 .marca-rockwell:hover {
-  color: #0ea5e9;
+  color: #CC0000;
 }
 
 /* SVG logo con grayscale — color al hover */
