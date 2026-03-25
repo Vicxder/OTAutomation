@@ -590,6 +590,19 @@ a   { text-decoration: none; }
   gap: 1rem 3rem;
 }
 
+.marca-rockwell {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #888;
+  transition: color 0.3s;
+  cursor: default;
+  display: inline-block;
+}
+.marca-rockwell:hover {
+  color: #0ea5e9;
+}
+
 /* SVG logo con grayscale — color al hover */
 .brand-logo {
   height: 50px;
