@@ -743,6 +743,14 @@ a   { text-decoration: none; }
   color: rgba(255, 255, 255, 0.28);
 }
 
+.footer-seo-tags {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.15);
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+}
+
 .footer-links {
   display: flex;
   gap: 1.5rem;
