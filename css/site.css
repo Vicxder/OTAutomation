@@ -235,6 +235,7 @@ a   { text-decoration: none; }
   display: flex;
   gap: 0.875rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn-primary {
@@ -286,6 +287,7 @@ a   { text-decoration: none; }
   padding-top: 2rem;
   border-top: 1px solid var(--border);
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .stat-value {
