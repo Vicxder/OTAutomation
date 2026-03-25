@@ -54,46 +54,28 @@ const revealObs = new IntersectionObserver((entries, obs) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-/* ─── 5. Formulario de contacto → Azure Logic Apps ─────────── */
-(function () {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-
-  const msg  = document.getElementById('formMsg');
-  const btn  = document.getElementById('sendBtn');
-
-  const FLOW_URL = 'https://prod-13.brazilsouth.logic.azure.com:443/workflows/349dbb5b199e45e9a58440b2abc4be60/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QH-Q445szrj_EDvWcaPgqbsn1N8RVWZEZ-GYkS-f7ME';
-  const API_KEY  = 'Dorel.,2025#.OTA';
-
-  form.addEventListener('submit', async e => {
+/* ─── 5. Formulario de contacto → Formspree ────────────────── */
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
-    msg.textContent = '';
-    btn.disabled    = true;
-    btn.textContent = 'Enviando…';
-
-    const data  = Object.fromEntries(new FormData(form).entries());
-    data.apiKey = API_KEY;
-
-    try {
-      const res = await fetch(FLOW_URL, {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(data),
-      });
-
-      if (res.ok) {
-        msg.style.color = '#34d399';
-        msg.textContent = '¡Mensaje enviado! Te responderemos pronto.';
-        form.reset();
-      } else {
-        throw new Error('Error al enviar. Intenta nuevamente.');
-      }
-    } catch (err) {
-      msg.style.color = '#f87171';
-      msg.textContent = err.message || 'No se pudo enviar el mensaje.';
-    } finally {
-      btn.disabled    = false;
-      btn.textContent = 'Enviar mensaje';
+    const data     = new FormData(form);
+    const response = await fetch(form.action, {
+      method:  'POST',
+      body:    data,
+      headers: { 'Accept': 'application/json' },
+    });
+    const msg = document.getElementById('formMsg');
+    if (response.ok) {
+      msg.classList.remove('d-none', 'text-danger');
+      msg.classList.add('text-success');
+      msg.textContent = '✅ ¡Mensaje enviado! Te contactaremos pronto.';
+      form.reset();
+    } else {
+      msg.textContent = '❌ Error al enviar. Escríbenos a contacto@otautomation.cl';
+      msg.classList.remove('d-none', 'text-success');
+      msg.classList.add('text-danger');
     }
+    msg.classList.remove('d-none');
   });
-})();
+}

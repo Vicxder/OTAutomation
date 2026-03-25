@@ -173,7 +173,7 @@ a   { text-decoration: none; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: #0d0d0d url('img/ota_services_showcase.gif') center/cover no-repeat;
+  background: #0d0d0d url('img/pantalla1.jpg') center/cover no-repeat;
 }
 
 /* Dark overlay */
@@ -181,11 +181,7 @@ a   { text-decoration: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    130deg,
-    rgba(13, 13, 13, 0.97) 0%,
-    rgba(10, 22, 48, 0.93) 100%
-  );
+  background: rgba(0, 0, 0, 0.75);
   z-index: 0;
 }
 
@@ -324,6 +320,14 @@ a   { text-decoration: none; }
 
 /* ─── NOSOTROS ────────────────────────────────────────────── */
 #nosotros { padding: 5.5rem 0; background: var(--bg-section); }
+
+.about-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
 
 .about-text p {
   color: var(--text-muted);
@@ -575,22 +579,21 @@ a   { text-decoration: none; }
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.5rem 2.25rem;
+  gap: 1rem 3rem;
 }
 
-.brand-item {
-  font-size: 1.125rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.18);
-  transition: color 0.25s;
-  cursor: default;
-  user-select: none;
-  padding: 0.35rem 0;
+/* SVG logo con grayscale — color al hover */
+.brand-logo {
+  height: 50px;
+  max-width: 130px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.55);
+  transition: filter 0.3s ease;
 }
 
-.brand-item:hover { color: rgba(255, 255, 255, 0.75); }
+.brand-logo:hover {
+  filter: grayscale(0%) brightness(1);
+}
 
 /* ─── CONTACTO ────────────────────────────────────────────── */
 #contact { padding: 5.5rem 0; background: var(--bg-alt); }
@@ -769,6 +772,104 @@ a   { text-decoration: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 
+/* ─── GALERÍA ─────────────────────────────────────────────── */
+#galeria { padding: 5.5rem 0; background: var(--bg-alt); }
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: default;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img { transform: scale(1.04); }
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.gallery-overlay span {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 1.25rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  line-height: 1.4;
+}
+
+.gallery-card:hover .gallery-overlay span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Formulario Bootstrap dark override ─────────────────── */
+.contact-form-card .form-control {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  font-size: 0.9375rem;
+  color: var(--text);
+  font-family: var(--font);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.contact-form-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.contact-form-card .form-control:focus {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(14, 165, 233, 0.5);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+  color: var(--text);
+}
+
+.contact-form-card .btn.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  border-radius: 8px;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.contact-form-card .btn.btn-primary:hover {
+  background: var(--accent-h);
+  border-color: var(--accent-h);
+  transform: translateY(-1px);
+}
+
+.contact-form-card .btn.btn-primary:focus {
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.35);
+}
+
+.contact-form-card #formMsg.text-success { color: #34d399 !important; }
+.contact-form-card #formMsg.text-danger  { color: #f87171 !important; }
+
 /* ─── Media Queries ───────────────────────────────────────── */
 @media (max-width: 768px) {
   .why-grid           { grid-template-columns: 1fr; }
@@ -777,9 +878,18 @@ a   { text-decoration: none; }
   .contact-form-card  { padding: 1.5rem; }
   .footer-inner       { flex-direction: column; align-items: flex-start; }
   .hero-stats         { gap: 1.5rem; }
+
+  /* Hero centrado en móvil */
+  .hero-inner         { text-align: center; }
+  .hero-eyebrow       { justify-content: center; }
+  .hero-subtitle,
+  .hero-tagline       { margin-left: auto; margin-right: auto; }
+  .hero-ctas          { justify-content: center; }
+  .hero-stats         { justify-content: center; }
+  .hero-title         { font-size: 2.1rem; }
 }
 
 @media (max-width: 576px) {
-  .hero-ctas  { flex-direction: column; }
+  .hero-ctas  { flex-direction: column; align-items: center; }
   .hero-stats { gap: 1rem; }
 }
