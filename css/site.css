@@ -173,6 +173,32 @@ a   { text-decoration: none; }
   align-items: center;
   background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);
   position: relative;
+  overflow: hidden;
+}
+
+/* Dot grid */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(14, 165, 233, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Radial glow behind text */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 18%;
+  width: 680px;
+  height: 520px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse, rgba(14, 165, 233, 0.1) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-inner {
@@ -307,7 +333,26 @@ a   { text-decoration: none; }
 }
 
 /* ─── NOSOTROS ────────────────────────────────────────────── */
-#nosotros { padding: 5.5rem 0; background: var(--bg-section); }
+#nosotros {
+  padding: 5.5rem 0;
+  background: var(--bg-section);
+  position: relative;
+  overflow: hidden;
+}
+
+#nosotros::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(255, 255, 255, 0.013) 40px,
+    rgba(255, 255, 255, 0.013) 41px
+  );
+  pointer-events: none;
+}
 
 .about-img {
   width: 100%;
@@ -367,7 +412,15 @@ a   { text-decoration: none; }
 }
 
 /* ─── SERVICIOS ───────────────────────────────────────────── */
-#servicios { padding: 5.5rem 0; background: var(--bg); }
+#servicios {
+  padding: 5.5rem 0;
+  background: var(--bg);
+  background-image:
+    linear-gradient(rgba(14, 165, 233, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  border-top: 1px solid rgba(14, 165, 233, 0.12);
+}
 
 .service-card {
   background: var(--bg-card);
@@ -433,7 +486,20 @@ a   { text-decoration: none; }
 }
 
 /* ─── EXPERIENCIA ─────────────────────────────────────────── */
-#experiencia { padding: 5.5rem 0; background: var(--bg-alt); }
+#experiencia {
+  padding: 5.5rem 0;
+  background: linear-gradient(135deg, #0b111e 0%, #0c1322 60%, #0a0f1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#experiencia::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 85% 50%, rgba(14, 165, 233, 0.07) 0%, transparent 55%);
+  pointer-events: none;
+}
 
 .clients-strip {
   display: flex;
@@ -473,7 +539,19 @@ a   { text-decoration: none; }
 }
 
 /* ─── POR QUÉ OTA ─────────────────────────────────────────── */
-#why { padding: 5.5rem 0; background: var(--bg-section); }
+#why {
+  padding: 5.5rem 0;
+  background: linear-gradient(180deg, #0f1117 0%, #111827 100%);
+  position: relative;
+}
+
+#why::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.45) 50%, transparent 100%);
+}
 
 .why-grid {
   display: grid;
@@ -597,7 +675,19 @@ a   { text-decoration: none; }
 }
 
 /* ─── CONTACTO ────────────────────────────────────────────── */
-#contact { padding: 5.5rem 0; background: var(--bg-alt); }
+#contact {
+  padding: 5.5rem 0;
+  background: linear-gradient(135deg, #0b111e 0%, #0d1520 100%);
+  position: relative;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.35) 50%, transparent 100%);
+}
 
 .contact-info-title {
   font-size: 1.1rem;
@@ -782,7 +872,19 @@ a   { text-decoration: none; }
 }
 
 /* ─── GALERÍA ─────────────────────────────────────────────── */
-#galeria { padding: 5.5rem 0; background: var(--bg-alt); }
+#galeria {
+  padding: 5.5rem 0;
+  background: linear-gradient(180deg, #0a0e18 0%, #0b111e 100%);
+  position: relative;
+}
+
+#galeria::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(14, 165, 233, 0.35) 50%, transparent 100%);
+}
 
 .gallery-card {
   position: relative;
